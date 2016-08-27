@@ -1,0 +1,19 @@
+{
+	"domain": "cafemeeple.jp",
+	"title": "Cafe Meeple",
+	"static": [],
+	"styles": [],
+	"scripts": [],
+	"fonts": [],
+	"icons": [],
+	"languages": [
+		"en"
+	],
+	"manifest": {},
+	"redirect": {},
+	"ports": {
+		"http": 4000,
+		"https": 4001,
+		"liveReload": 9000
+	}
+}

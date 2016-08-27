@@ -1,0 +1,12 @@
+{
+	"name": "cafemeeple.jp",
+	"version": "0.0.0",
+	"description": "Cafe Meeple App.",
+	"keywords": [],
+	"homepage": "",
+	"repository": "",
+	"license": "",
+	"dependencies": {
+		"aero": "*"
+	}
+}
