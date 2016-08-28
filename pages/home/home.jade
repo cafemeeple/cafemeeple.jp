@@ -1,2 +1,6 @@
 h1 Cafe Meeple
-p ...
+
+if !user
+	p Not logged in.
+else
+	p= `Welcome ${user.firstName}`

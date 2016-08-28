@@ -10,6 +10,7 @@
 		"aero": "*",
 		"aero-reset": "*",
 		"aero-ajax": "*",
-		"aero-aerospike": "*"
+		"aero-aerospike": "*",
+		"aero-auth": "*"
 	}
 }
