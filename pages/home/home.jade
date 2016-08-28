@@ -1,6 +1,7 @@
 h1 Cafe Meeple
 
 if !user
-	p Not logged in.
+	p
+		a(href='/auth/facebook') Facebook login
 else
-	p= `Welcome ${user.firstName}`
+	p= `Welcome ${user.first_name}`

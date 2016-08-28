@@ -11,6 +11,7 @@
 		"aero-reset": "*",
 		"aero-ajax": "*",
 		"aero-aerospike": "*",
-		"aero-auth": "*"
+		"aero-auth": "*",
+		"aero-auth-facebook": "*"
 	}
 }
