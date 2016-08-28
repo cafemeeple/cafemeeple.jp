@@ -11,6 +11,10 @@
 	],
 	"manifest": {},
 	"redirect": {},
+	"database": {
+		"host": "127.0.0.1:3000",
+		"namespace": "meeple"
+	},
 	"ports": {
 		"http": 4000,
 		"https": 4001,

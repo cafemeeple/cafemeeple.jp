@@ -7,6 +7,9 @@
 	"repository": "",
 	"license": "",
 	"dependencies": {
-		"aero": "*"
+		"aero": "*",
+		"aero-reset": "*",
+		"aero-ajax": "*",
+		"aero-aerospike": "*"
 	}
 }
