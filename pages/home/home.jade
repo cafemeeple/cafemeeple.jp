@@ -1,7 +1,17 @@
-h1 Cafe Meeple
-
 if !user
-	p
-		a(href='/auth/facebook') Facebook login
+	.toolbar
+		a.button(href='/auth/facebook')
+			span.fa.fa-sign-in
+			| Facebook login
 else
-	p= `Welcome ${user.first_name}`
+	p
+		| Welcome 
+		a= `${user.first_name}`
+		| .
+	.toolbar
+		button
+			span.fa.fa-group
+			| New hangout
+		a.button(href='/logout')
+			span.fa.fa-sign-out
+			| Logout

@@ -4,7 +4,9 @@
 	"static": [],
 	"styles": [],
 	"scripts": [],
-	"fonts": [],
+	"fonts": [
+		"Lato"
+	],
 	"icons": [],
 	"languages": [
 		"en"

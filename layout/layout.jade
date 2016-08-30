@@ -4,4 +4,10 @@ html
 		title= app.config.title
 
 	body
+		#header
+			h1
+				a.ajax(href='/')
+					.title-word Cafe
+					| 
+					.title-word Meeple
 		main#content!= content
