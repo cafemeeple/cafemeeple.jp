@@ -1,0 +1,12 @@
+h2 New hangout
+
+input(type='text', placeholder='Game title', list='games')
+input(type='date')
+input(type='time')
+	
+p
+	textarea(placeholder='Message')
+
+datalist#games
+	each game in games
+		option(value=game)

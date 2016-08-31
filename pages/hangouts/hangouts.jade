@@ -1,0 +1,15 @@
+if !user
+	h2 Welcome
+	p Please login via Google, Facebook or Twitter.
+else
+	h2 Hangouts
+
+	p
+		| Welcome 
+		a= `${user.first_name}`
+		| .
+
+	p
+		a.button.ajax(href='/hangouts/new')
+			span.fa.fa-plus
+			| New hangout
