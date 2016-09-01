@@ -16,20 +16,20 @@ html
 					span.fa.fa-sign-in
 					| Facebook login
 		else
-			#toolbar
+			nav#toolbar
 				a.button.ajax(href='/')
-					span.fa.fa-group
-					| Hangouts
+					i.fa.fa-group
+					span.nav-text Hangouts
 				a.button.ajax(href='/leaderboards')
-					span.fa.fa-trophy
-					| Leaderboards
+					i.fa.fa-trophy
+					span.nav-text Leaderboards
 				a.button.ajax(href='/profile')
-					span.fa.fa-user
-					| Profile
+					i.fa.fa-user
+					span.nav-text Profile
 				a.button.ajax(href='/settings')
-					span.fa.fa-cog
-					| Settings
+					i.fa.fa-cog
+					span.nav-text Settings
 				a.button(href='/logout')
-					span.fa.fa-sign-out
-					| Logout
-		main#content!= content
+					i.fa.fa-sign-out
+					span.nav-text Logout
+		main#content.fade!= content

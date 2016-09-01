@@ -28,5 +28,31 @@ span.fa
 #toolbar
 	display flex
 	flex-flow row wrap
+	justify-content center
 	background-color headerBGColor - 5%
 	padding (layoutPadding * 0.25) layoutPadding
+
+	.button
+		color rgba(255, 255, 255, 0.5)
+		background-color transparent
+		margin-right 0.25em
+
+		&:hover
+			color rgba(255, 255, 255, 0.75)
+			background-color rgba(255, 255, 255, 0.4)
+
+		&.active
+			color rgba(255, 255, 255, 1)
+			text-shadow 0 0 8px rgba(255, 255, 255, 0.8)
+
+.nav-text
+	display none
+
+@media only screen and (min-width: 710px)
+	#toolbar
+		justify-content flex-start
+
+		.nav-text
+			display inline-block
+		.fa
+			margin-right 0.75em

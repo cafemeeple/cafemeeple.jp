@@ -1,5 +1,15 @@
 exports.get = function*(request, response) {
+	let hangouts = yield db.all('Hangouts')
+
+	hangouts.sort((a, b) => {
+		if(a.date === b.date)
+			return a.time - b.time
+		else
+			return b.date - a.date
+	})
+
 	response.render({
-		user: request.user
+		user: request.user,
+		hangouts
 	})
 }

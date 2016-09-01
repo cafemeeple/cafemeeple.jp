@@ -1,11 +1,15 @@
 h2 New hangout
 
-input(type='text', placeholder='Game title', list='games')
-input(type='date')
-input(type='time')
-	
+input#game(type='text', placeholder='Game title', list='games')
+input#date(type='date')
+input#time(type='time')
+
 p
-	textarea(placeholder='Message')
+	textarea#message(placeholder='Message')
+
+.button(onclick='publishHangout()')
+	span.fa.fa-check
+	| Publish
 
 datalist#games
 	each game in games

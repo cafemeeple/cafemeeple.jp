@@ -1,4 +1,4 @@
-button, .button, input, textarea
+.button, input, textarea
 	display inline-block
 	appearance none
 	border none
@@ -7,7 +7,7 @@ button, .button, input, textarea
 	padding 0.75em 1em
 	font inherit
 	border-radius 3px
-	transition background-color 250ms ease
+	transition all 250ms ease
 	height 42px
 	text-align left
 	margin-right 0.5em
@@ -19,8 +19,10 @@ textarea
 	width 100%
 	height 200px
 	margin 0
+	transition none
+	line-height 1.5em
 
-button, .button
+.button
 	text-align center
 
 	&:hover

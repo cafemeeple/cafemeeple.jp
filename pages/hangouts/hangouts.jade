@@ -3,13 +3,16 @@ if !user
 	p Please login via Google, Facebook or Twitter.
 else
 	h2 Hangouts
-
-	p
-		| Welcome 
-		a= `${user.first_name}`
-		| .
-
-	p
+	
+	.hangouts
+		each hangout in hangouts
+			.hangout
+				h3.hangout-game= hangout.game
+				p.hangout-message= hangout.message
+				p.hangout-date= hangout.date
+				p.hangout-time= hangout.time
+	
+	.actions
 		a.button.ajax(href='/hangouts/new')
 			span.fa.fa-plus
 			| New hangout

@@ -13,6 +13,8 @@
 		"aero-font-awesome": "*",
 		"aero-aerospike": "*",
 		"aero-auth": "*",
-		"aero-auth-facebook": "*"
+		"aero-auth-facebook": "*",
+		"body-parser": "*",
+		"shortid": "*"
 	}
 }
