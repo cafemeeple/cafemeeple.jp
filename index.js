@@ -1,4 +1,4 @@
-let app = require('aero')()
+global.app = require('aero')()
 let bodyParser = require('body-parser')
 
 app.apiKeys = require('./security/api-keys.json')
