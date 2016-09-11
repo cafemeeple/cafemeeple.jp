@@ -16,17 +16,23 @@ else
 						span.hangout-date= hangout.date.replace('-', '年 ').replace('-', '月 ') + '日'
 						span.hangout-time= hangout.time + ' 時'
 					ul.hangout-members
-						each member in hangout.members
+						each member in hangout.membersAsUsers
 							li.hangout-member= member.givenName
 			
 				.hangout-actions
-					button.button.action-join
-						span.fa.fa-hand-peace-o
-						| Join
+					if hangout.members.indexOf(user.id) === -1
+						button.button.action-join(onclick=`joinHangout('${hangout.id}')`)
+							span.fa.fa-hand-peace-o
+							| Join
+					else if hangout.userId !== user.id
+						button.button.action-leave(onclick=`leaveHangout('${hangout.id}')`)
+							span.fa.fa-hand-stop-o
+							| Leave
 					
-					button.button.action-delete
-						span.fa.fa-remove
-						| Delete
+					if hangout.userId === user.id
+						button.button.action-delete(onclick=`deleteHangout('${hangout.id}')`)
+							span.fa.fa-remove
+							| Delete
 
 	.actions
 		a.button.ajax(href='/hangouts/new')

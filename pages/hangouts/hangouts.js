@@ -9,7 +9,7 @@ exports.get = function*(request, response) {
 	})
 
 	for(let hangout of hangouts) {
-		hangout.members = yield db.getMany('Users', hangout.members)
+		hangout.membersAsUsers = yield db.getMany('Users', hangout.members)
 	}
 
 	response.render({

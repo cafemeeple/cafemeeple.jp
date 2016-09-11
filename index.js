@@ -18,4 +18,27 @@ app.getDefaultUser = function() {
 
 app.use(bodyParser.json())
 
+app.HangoutController = function(next) {
+	next = Promise.coroutine(next)
+
+	return Promise.coroutine(function*(request, response) {
+		let user = request.user
+		let id = request.body.id
+
+		if(!user) {
+			response.writeHead(400)
+			return response.end('Not logged in')
+		}
+
+		if(!id) {
+			response.writeHead(400)
+			return response.end('Undefined id')
+		}
+
+		yield next(user, id)
+
+		response.end()
+	})
+}
+
 app.run()
