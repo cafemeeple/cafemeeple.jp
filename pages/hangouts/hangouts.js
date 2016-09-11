@@ -8,6 +8,10 @@ exports.get = function*(request, response) {
 			return b.date - a.date
 	})
 
+	for(let hangout of hangouts) {
+		hangout.members = yield db.getMany('Users', hangout.members)
+	}
+
 	response.render({
 		user: request.user,
 		hangouts

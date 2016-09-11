@@ -7,11 +7,27 @@ else
 	.hangouts
 		each hangout in hangouts
 			.hangout
-				h3.hangout-game= hangout.game
-				p.hangout-message= hangout.message
-				p.hangout-date= hangout.date
-				p.hangout-time= hangout.time
-	
+				.hangout-info
+					h3.hangout-game
+						span= hangout.gameTitle
+						i.fa.fa-gamepad
+					p.hangout-message= hangout.message
+					p.hangout-datetime
+						span.hangout-date= hangout.date.replace('-', '年 ').replace('-', '月 ') + '日'
+						span.hangout-time= hangout.time + ' 時'
+					ul.hangout-members
+						each member in hangout.members
+							li.hangout-member= member.givenName
+			
+				.hangout-actions
+					button.button
+						span.fa.fa-hand-peace-o
+						| Join
+					
+					button.button
+						span.fa.fa-remove
+						| Delete
+
 	.actions
 		a.button.ajax(href='/hangouts/new')
 			span.fa.fa-plus

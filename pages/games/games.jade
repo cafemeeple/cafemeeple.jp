@@ -1,0 +1,12 @@
+if game
+	h2= game.title
+	p= game.description
+else if games
+	h2 Games
+	
+	ul
+		each game in games
+			li
+				a.ajax(href='/games/' + game.id)= game.title
+else
+	p Game doesn't exist.

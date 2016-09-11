@@ -1,8 +1,9 @@
 h2 New hangout
 
-input#game(type='text', placeholder='Game title', list='games')
-input#date(type='date')
-input#time(type='time')
+p
+	input#game(type='text', placeholder='Game title', list='games')
+	input#date(type='date')
+	input#time(type='time')
 
 p
 	textarea#message(placeholder='Message')
@@ -13,4 +14,4 @@ p
 
 datalist#games
 	each game in games
-		option(value=game)
+		option(value=game.title)

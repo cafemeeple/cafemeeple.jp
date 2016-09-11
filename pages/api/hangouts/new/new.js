@@ -19,13 +19,19 @@ exports.post = function*(request, response) {
 
 	let id = shortid.generate()
 	let body = request.body
+	let gameTitleMatches = yield db.filter('Games', game => game.title.toLowerCase() === body.game.toLowerCase())
+	let gameId = (gameTitleMatches.length === 1) ? gameTitleMatches[0].id : null
 
 	yield db.set('Hangouts', id, {
 		id,
+		userId: user.id,
+		members: [user.id],
 		message: body.message,
-		game: body.game,
+		gameId,
+		gameTitle: body.game,
 		date: body.date,
-		time: body.time
+		time: body.time,
+		created: (new Date()).toISOString()
 	})
 
 	response.end(id)

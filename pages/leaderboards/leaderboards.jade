@@ -1,13 +1,5 @@
 h2 Leaderboards
 
 ol
-	li.leaderboard-row Nathan
-	li.leaderboard-row -
-	li.leaderboard-row -
-	li.leaderboard-row -
-	li.leaderboard-row -
-	li.leaderboard-row -
-	li.leaderboard-row -
-	li.leaderboard-row -
-	li.leaderboard-row -
-	li.leaderboard-row -
+	each user in users
+		li.leaderboard-row= user.givenName

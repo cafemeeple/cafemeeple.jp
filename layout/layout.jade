@@ -4,13 +4,13 @@ html
 		title= app.config.title
 
 	body
-		#header
-			h1#title
-				a.ajax(href='/')
-					.title-word Cafe
-					| 
-					.title-word Meeple
 		if !user
+			#header
+				h1#title
+					a.ajax(href='/')
+						.title-word Cafe
+						| 
+						.title-word Meeple
 			#toolbar
 				a.button(href='/auth/facebook')
 					span.fa.fa-sign-in
@@ -20,16 +20,19 @@ html
 				a.button.ajax(href='/')
 					i.fa.fa-group
 					span.nav-text Hangouts
+				a.button.ajax(href='/games')
+					i.fa.fa-gamepad
+					span.nav-text Games
+				a.button.ajax(href='/drinks')
+					i.fa.fa-beer
+					span.nav-text Drinks
 				a.button.ajax(href='/leaderboards')
 					i.fa.fa-trophy
 					span.nav-text Leaderboards
 				a.button.ajax(href='/profile')
 					i.fa.fa-user
 					span.nav-text Profile
-				a.button.ajax(href='/settings')
-					i.fa.fa-cog
-					span.nav-text Settings
-				a.button(href='/logout')
-					i.fa.fa-sign-out
-					span.nav-text Logout
+				//- a.button.ajax(href='/settings')
+				//- 	i.fa.fa-cog
+				//- 	span.nav-text Settings
 		main#content.fade!= content
