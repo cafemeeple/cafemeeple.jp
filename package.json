@@ -15,6 +15,7 @@
 		"aero-auth": "*",
 		"aero-auth-facebook": "*",
 		"body-parser": "*",
+		"chalk": "*",
 		"shortid": "*"
 	}
 }
