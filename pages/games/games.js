@@ -12,6 +12,8 @@ exports.get = function*(request, response) {
 	} else {
 		let games = yield db.all('Games')
 
+		games.sort((a, b) => a.title.localeCompare(b.title))
+
 		response.render({
 			user,
 			games

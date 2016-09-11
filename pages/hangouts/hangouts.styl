@@ -9,11 +9,24 @@
 .hangout-actions
 	display flex
 	flex-flow row wrap
-	justify-content flex-end
+	justify-content center
 	margin-top 0.5em
 	.button
 		margin-left 0.5em
 		flex 1
+		max-width 150px
+
+.action-join
+	background rgb(32, 160, 32)
+
+	&:hover
+		background rgb(32, 160, 32) + 20%
+
+.action-delete
+	background rgb(160, 32, 32)
+
+	&:hover
+		background rgb(160, 32, 32) + 20%
 
 .hangout-members
 .hangout-message
@@ -36,9 +49,11 @@
 		opacity 0.5
 		float right
 
+.hangout-datetime
+	font-size 0.8em
+
 .hangout-date, .hangout-time
 	display inline-block
 	opacity 0.5
 	margin 0
 	margin-right 1em
-	font-size 0.8em

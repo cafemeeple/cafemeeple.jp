@@ -1,7 +1,7 @@
 if !user
 	p Not logged in.
 else
-	h2= user.first_name
+	h2= user.givenName
 	
 	p
 		a.ajax(href='/settings')
